@@ -78,9 +78,6 @@
     <div class="profile-section">
       <h2>Fun Facts</h2>
       <div class="form-group">
-        <label>Holidays I Celebrate</label>
-        <div class="tag-input-wrap" id="holidaysWrap">
-          <input type="text" class="tag-input" id="holidaysInput" placeholder="Type and press Enter...">
         </div>
       </div>
       <div class="form-group">
@@ -166,7 +163,6 @@
       };
     }
 
-    setupTagInput('holidaysWrap', 'holidaysInput', 'holidays');
     setupTagInput('snacksWrap', 'snacksInput', 'snacks');
     setupTagInput('hobbiesWrap', 'hobbiesInput', 'hobbies');
 
@@ -185,7 +181,6 @@
         document.getElementById('funFact').value = profile.funFact || '';
         document.getElementById('favDrink').value = profile.favDrink || '';
 
-        window.setTags_holidays(profile.holidays || []);
         window.setTags_snacks(profile.snacks || []);
         window.setTags_hobbies(profile.hobbies || []);
 
@@ -227,7 +222,6 @@
         pronouns: document.getElementById('pronouns').value.trim(),
         funFact: document.getElementById('funFact').value.trim(),
         favDrink: document.getElementById('favDrink').value.trim(),
-        holidays: window.getTags_holidays(),
         snacks: window.getTags_snacks(),
         hobbies: window.getTags_hobbies(),
         avatarUrl: avatar.dataset.url || ''
